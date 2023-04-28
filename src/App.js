@@ -1,10 +1,11 @@
 
 import './App.css';
 import * as React from 'react';
-import Button from '@mui/material/Button'
+// import Button from '@mui/material/Button'
 import Wrapper from './components/Wrapper'
 import { Clock } from '@sujitsimon/react-flipclock';
 import './styles/Clock.css'
+import Upcoming from './components/Upcoming';
 
 
 
@@ -15,6 +16,7 @@ function App() {
       {/* <div>
       <Button variant="contained">Hello World</Button>
     </div> */}
+      <Upcoming />
     </Wrapper>
 
 

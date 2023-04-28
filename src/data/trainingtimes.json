@@ -1,0 +1,14 @@
+{
+  "training": [
+    {
+      "time": "some time",
+      "type": "radio",
+      "instructor": "Linus"      
+    },  
+    {
+      "time": "some other time",
+      "type": "duckling",
+      "instructor": "Lucy"      
+    }
+  ]
+}

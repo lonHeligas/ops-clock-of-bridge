@@ -1,14 +1,22 @@
 {
   "training": [
     {
-      "time": "some time",
+      "day": "thursday",
+      "time": "0800",
       "type": "radio",
       "instructor": "Linus"      
-    },  
+    },     
     {
-      "time": "some other time",
+      "day": "thursday",
+      "time": "1400",
       "type": "duckling",
       "instructor": "Lucy"      
+    },
+    {
+      "day": "friday",
+      "time": "0900",
+      "type": "radio",
+      "instructor": "Larry"      
     }
   ]
 }

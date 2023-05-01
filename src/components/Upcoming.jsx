@@ -2,6 +2,7 @@ import React from 'react';
 import "../styles/Clock.css"
 // import Button from '@mui/material-next/Button';
 import { useState } from 'react';
+import { useContext } from 'react';
 import TrainingList from '../data/trainingtimes.json';
 import Upcomingitem from './Upcomingitem';
 import Moment from 'react-moment';

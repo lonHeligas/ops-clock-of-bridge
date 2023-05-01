@@ -4,6 +4,7 @@ import "../styles/Clock.css"
 import { useState } from 'react';
 import TrainingList from '../data/trainingtimes.json';
 import Upcomingitem from './Upcomingitem';
+import Moment from 'react-moment';
 
 
 
@@ -12,7 +13,6 @@ const Upcoming = () => {
   return TrainingList.training.map(Training => {
     return (
       <Upcomingitem data={Training}/>
-
       
     )
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import "../styles/Clock.css"
+import "../styles/Upcomingitem.css"
 // import Button from '@mui/material-next/Button';
 import { useState } from 'react';
-
+import Moment from 'react-moment';
 // get a date library 
 
 
@@ -11,13 +11,9 @@ import { useState } from 'react';
 
 const Upcomingitem = (props) => {
   return (
-    <div>
-      
-
-      {/* {
-        JSON.stringify(props.data)
-      } */}
-    </div>
+    <training class="training-entry">      {
+        JSON.stringify(props.data)      }
+    </training>
   )
 
   

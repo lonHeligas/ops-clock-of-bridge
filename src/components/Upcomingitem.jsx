@@ -16,7 +16,13 @@ const Upcomingitem = (traininglesson) => {
   
     JSON.stringify(traininglesson.data)      
   return (
-    <training class="training-entry">    
+    <training class="training-entry">
+      <p>
+      <lineitem>
+        Day: {traininglesson.data.day} Time: {traininglesson.data.time} {traininglesson.data.type} training
+        Your instructor is: {traininglesson.data.instructor}
+      </lineitem>
+      </p>
     </training>
   )
 

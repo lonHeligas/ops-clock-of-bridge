@@ -17,6 +17,18 @@
       "time": "0900",
       "type": "radio",
       "instructor": "Larry"      
+    },
+    {
+      "day": "saturday",
+      "time": "0900",
+      "type": "duckling",
+      "instructor": "Luke"      
+    },
+    {
+      "day": "sunday",
+      "time": "0900",
+      "type": "radio",
+      "instructor": "Lemmy"      
     }
   ]
 }

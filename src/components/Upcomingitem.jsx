@@ -19,8 +19,19 @@ const Upcomingitem = (traininglesson) => {
     <training class="training-entry">
       <p>
       <lineitem>
-        Day: {traininglesson.data.day} Time: {traininglesson.data.time} {traininglesson.data.type} training
-        Your instructor is: {traininglesson.data.instructor}
+        <day class="lineitem day">
+          Day: {traininglesson.data.day} 
+        </day>
+        <time class="lineitem time">
+          Time: {traininglesson.data.time}
+        </time>
+        <type class="lineitem type">
+          {traininglesson.data.type} training
+        </type>
+        <instructor class="lineitem instructor">
+          Your instructor is: {traininglesson.data.instructor}
+        </instructor>
+        
       </lineitem>
       </p>
     </training>

@@ -2,7 +2,13 @@
 
 
 .training-entry {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 30px;
+}
+
+.lineitem {
+  display: inline-flex;
+  justify-content: space-around;
+  margin-left: 20px;
 }
 

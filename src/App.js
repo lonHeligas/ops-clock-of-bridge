@@ -6,18 +6,40 @@ import Wrapper from './components/Wrapper'
 import { Clock } from '@sujitsimon/react-flipclock';
 import './styles/Clock.css'
 import Upcoming from './components/Upcoming';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Admin from './components/Admin';
+
+
 
 
 
 function App() {
   return (
-    <Wrapper className="wrapper">
-      <Clock className="clock-flip" config={{height: '175px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/>
-      {/* <div>
-      <Button variant="contained">Hello World</Button>
-    </div> */}
-      <Upcoming />
-    </Wrapper>
+    <HashRouter>
+      <Routes>
+        <Route path="/admin" element={
+          <Wrapper className="wrapper">
+            <Admin>
+              
+            </Admin>
+        </Wrapper>}>        
+        </Route>
+        
+        <Route path="/" element={
+          <Wrapper className="wrapper">
+          <Clock className="clock-flip" config={{height: '175px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/>
+          {/* <div>
+          <Button variant="contained">Hello World</Button>
+        </div> */}
+          <Upcoming />
+        </Wrapper>}>
+        
+        </Route>
+      </Routes>
+          
+    </HashRouter>
+
+
 
 
   )

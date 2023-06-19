@@ -5,14 +5,13 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import TrainingList from '../data/trainingtimes.json';
 import Upcomingitem from './Upcomingitem';
-import Moment from 'react-moment';
+import moment from 'moment';
 
 
 
-// const SortedList = [...TrainingList].sort((a, b) => a.data.time = b.data.time);
-// console.log(SortedList);
-// console.log('sorted list?');
-
+const SortedList = TrainingList.training.sort((a, b) => moment(a.date).unix() - moment(b.date).unix());
+console.log('sorted list: ');
+console.log(SortedList);
 
 
 

@@ -4,15 +4,18 @@ import "../styles/Upcomingitem.css"
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
-import Moment from 'react-moment';
-
+// import Moment from 'react-moment';
+import moment from 'moment';
 // get a date library 
 
 
 
 const Upcomingitem = (traininglesson) => {
+const trainingDate = moment(traininglesson.data.date);
 
-  console.log("trainingLesson is: ", traininglesson)
+  // console.log("trainingLesson is: ", traininglesson)
+  // console.log('training lesson');
+  // console.log(moment(traininglesson.data.date));
   
     JSON.stringify(traininglesson.data)      
   return (
@@ -20,10 +23,10 @@ const Upcomingitem = (traininglesson) => {
       <p>
       <lineitem>
         <day class="lineitem day">
-          Day: {traininglesson.data.day} 
+          Day: {trainingDate.format('dddd')}
         </day>
         <time class="lineitem time">
-          Time: {traininglesson.data.time}
+          Time: {trainingDate.format('h:mm a')}
         </time>
         <type class="lineitem type">
           {traininglesson.data.type} training

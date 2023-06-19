@@ -13,17 +13,18 @@
       "instructor": "Lucy"      
     },
     {
-      "day": "friday",
-      "time": "0900",
-      "type": "radio",
-      "instructor": "Larry"      
-    },
-    {
       "day": "saturday",
       "time": "0900",
       "type": "duckling",
       "instructor": "Luke"      
     },
+    {
+      "day": "friday",
+      "time": "0900",
+      "type": "radio",
+      "instructor": "Larry"      
+    },
+   
     {
       "day": "sunday",
       "time": "0900",

@@ -9,12 +9,17 @@ import Moment from 'react-moment';
 
 
 
+// const SortedList = [...TrainingList].sort((a, b) => a.data.time = b.data.time);
+// console.log(SortedList);
+// console.log('sorted list?');
+
+
+
 
 const Upcoming = () => {
   return TrainingList.training.map(Training => {
     return (
-      <Upcomingitem data={Training}/>
-      
+      <Upcomingitem data={Training}/>      
     )
 
   } 

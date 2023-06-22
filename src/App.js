@@ -28,9 +28,7 @@ function App() {
         <Route path="/" element={
           <Wrapper className="wrapper">
           <Clock className="clock-flip" config={{height: '175px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/>
-          {/* <div>
-          <Button variant="contained">Hello World</Button>
-        </div> */}
+       
           <Upcoming />
         </Wrapper>}>
         

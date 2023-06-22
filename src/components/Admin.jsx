@@ -1,4 +1,15 @@
+import '../App.css';
 import React from 'react';
+import { Clock } from '@sujitsimon/react-flipclock';
+import '../styles/Clock.css'
+import TrainingEvent from './TrainingEvent';
+import Wrapper from './Wrapper';
+
+
+
+
+
+
 
 // one component that's an editable form for one event
 // map the data from the json into as many forms as you have events
@@ -7,19 +18,13 @@ import React from 'react';
 
 
 
-
-
-
-
-
-
-
-
 const Admin = () => {
  return (
-  <div>
-    HI THERE!
-  </div>
+  <Wrapper>
+  <Clock className="clock-flip" config={{height: '100px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/>
+  <TrainingEvent />
+
+  </Wrapper>
  )
 }
 

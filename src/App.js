@@ -19,12 +19,10 @@ function App() {
       <Routes>
         <Route path="/admin" element={
           <Wrapper className="wrapper">
-            <Admin>
-              
+            <Admin>              
             </Admin>
         </Wrapper>}>        
-        </Route>
-        
+        </Route>        
         <Route path="/" element={
           <Wrapper className="wrapper">
           <Clock className="clock-flip" config={{height: '175px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/>

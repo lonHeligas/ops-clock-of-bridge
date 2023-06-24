@@ -8,13 +8,14 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import "react-datepicker/dist/react-datepicker.css";
 
 
 // get the list of events like UpcomingItem and then change them to input fields
 
 
 const TrainingEvent = () => {
-const [startDate, setStartDate] = useState(new Date());
+const [startDate, setStartDate] = useState(setHours(setMinutes(new Date(), 0), 9));
   return (
     <div> 
       <FormControl>
@@ -22,14 +23,13 @@ const [startDate, setStartDate] = useState(new Date());
       <lineitem class="training-entry">
         <p>Enter a new training event here:</p>
         <day class="lineitem day">
-          Day:
-          <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-        </day>
-        <time class="lineitem time">
-          Time:
-          <input type="text" >
-            </input>
-        </time>
+          Day and Time:
+          <DatePicker 
+          showTimeSelect
+          selected={startDate} 
+          onChange={(date) => setStartDate(date)} />
+          </day>
+       
         <type class="lineitem type">
           <FormLabel id="training-row-radio-buttons-group-label">Training:</FormLabel>
           <RadioGroup

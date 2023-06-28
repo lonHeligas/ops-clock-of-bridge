@@ -2,7 +2,7 @@
   "training": [
     {
       "date": "2023-07-05T08:00-0500",     
-      "type": "radio",
+      "type": "radtrain",
       "instructor": "Linus"      
     },     
     {      
@@ -17,13 +17,13 @@
     },
     {      
       "date": "2023-07-07T12:00-0500",     
-      "type": "radio",
+      "type": "radtrain",
       "instructor": "Larry"      
     },   
   
     {      
       "date": "2023-07-08T14:00-0500",     
-      "type": "radio",
+      "type": "radtrain",
       "instructor": "Lemmy"      
     }
   ]

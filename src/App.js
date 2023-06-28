@@ -8,6 +8,7 @@ import './styles/Clock.css'
 import Upcoming from './components/Upcoming';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Admin from './components/Admin';
+import AdminButton from './components/AdminButton';
 
 
 
@@ -26,8 +27,10 @@ function App() {
         <Route path="/" element={
           <Wrapper className="wrapper">
           <Clock className="clock-flip" config={{height: '175px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/>
+          
        
           <Upcoming />
+          <AdminButton />
         </Wrapper>}>
         
         </Route>

@@ -48,7 +48,7 @@ const TrainingEvent = () => {
         <FormControlLabel value="ducktrain" control={<Radio />} label="Duckling" />
         <FormControlLabel value="other" control={<Radio />} label="Miscellaneous" />
        
-          </RadioGroup>
+        </RadioGroup>
         </type>
         <instructor class="lineitem instructor">
           Instructor:

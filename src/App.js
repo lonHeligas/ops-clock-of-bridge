@@ -1,4 +1,3 @@
-
 import './App.css';
 import * as React from 'react';
 // import Button from '@mui/material/Button'
@@ -10,15 +9,7 @@ import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Admin from './components/Admin';
 import AdminButton from './components/AdminButton';
 
-
-
-
-
-
-
 function App() {
-
-
 
   return (
     <HashRouter>
@@ -36,20 +27,13 @@ function App() {
        
           <Upcoming />
           <AdminButton>
-            <Link to="{/admin}" relative="path" target="_blank"></Link>
+            {/* <Link to="{/admin}" relative="path" target="_blank"></Link> */}
           </AdminButton>
-        </Wrapper>}>
-        
+        </Wrapper>}>        
         </Route>
-      </Routes>
-          
+      </Routes>          
     </HashRouter>
-
-
-
-
   )
-  
 }
 
 export default App;

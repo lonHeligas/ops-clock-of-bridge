@@ -6,7 +6,7 @@ import Wrapper from './components/Wrapper'
 import { Clock } from '@sujitsimon/react-flipclock';
 import './styles/Clock.css'
 import Upcoming from './components/Upcoming';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import Admin from './components/Admin';
 import AdminButton from './components/AdminButton';
 
@@ -14,7 +14,16 @@ import AdminButton from './components/AdminButton';
 
 
 
+
+
 function App() {
+
+const AdminButtonClick = () => {
+  console.log ("Hello there")
+  useNavigate('/admin');
+}
+
+
   return (
     <HashRouter>
       <Routes>
@@ -30,7 +39,7 @@ function App() {
           
        
           <Upcoming />
-          <AdminButton />
+          <AdminButton onClick={AdminButtonClick}/>
         </Wrapper>}>
         
         </Route>

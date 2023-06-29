@@ -6,7 +6,7 @@ import Wrapper from './components/Wrapper'
 import { Clock } from '@sujitsimon/react-flipclock';
 import './styles/Clock.css'
 import Upcoming from './components/Upcoming';
-import { HashRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Admin from './components/Admin';
 import AdminButton from './components/AdminButton';
 
@@ -18,10 +18,6 @@ import AdminButton from './components/AdminButton';
 
 function App() {
 
-const AdminButtonClick = () => {
-  console.log ("Hello there")
-  useNavigate('/admin');
-}
 
 
   return (
@@ -36,10 +32,12 @@ const AdminButtonClick = () => {
         <Route path="/" element={
           <Wrapper className="wrapper">
           <Clock className="clock-flip" config={{height: '175px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/>
-          
+          {/* backgroundColor: '#8dc63f', textColor: '#92278f' */}
        
           <Upcoming />
-          <AdminButton onClick={AdminButtonClick}/>
+          <AdminButton>
+            <Link to="{/admin}" relative="path" target="_blank"></Link>
+          </AdminButton>
         </Wrapper>}>
         
         </Route>

@@ -25,8 +25,9 @@ const theme = createTheme({
 
 const AdminButton = ()   => {
   return (
-    <Button variant="contained" color="secondary">Launch Admin Page</Button>
+    <Button variant="contained" color="secondary">Admin</Button>
   )
 }
 
 export default AdminButton
+

@@ -19,8 +19,10 @@ const theme = createTheme({
 
 const AdminButton = ()   => {
   return (
-    <Button variant="contained" color="secondary">
-       <Link id="admin-button" to="/admin" relative="path" target="_blank">Admin</Link></Button>
+   
+       <Link id="admin-button" to="/admin" relative="path" target="_blank">
+         <Button variant="contained" color="secondary">Admin</Button>         
+        </Link>
   )
 }
 

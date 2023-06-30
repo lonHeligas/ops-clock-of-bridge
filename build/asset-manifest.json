@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ops-clock-of-bridge/static/css/main.68965002.css",
+    "main.js": "/ops-clock-of-bridge/static/js/main.adfce830.js",
+    "static/js/787.d97232d9.chunk.js": "/ops-clock-of-bridge/static/js/787.d97232d9.chunk.js",
+    "static/media/Modak-Regular.ttf": "/ops-clock-of-bridge/static/media/Modak-Regular.5e86e34ad9d1e27c58a2.ttf",
+    "index.html": "/ops-clock-of-bridge/index.html",
+    "main.68965002.css.map": "/ops-clock-of-bridge/static/css/main.68965002.css.map",
+    "main.adfce830.js.map": "/ops-clock-of-bridge/static/js/main.adfce830.js.map",
+    "787.d97232d9.chunk.js.map": "/ops-clock-of-bridge/static/js/787.d97232d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68965002.css",
+    "static/js/main.adfce830.js"
+  ]
+}

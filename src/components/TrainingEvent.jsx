@@ -29,10 +29,11 @@ const TrainingEvent = () => {
         <day class="lineitem day">
           Day and Time:
           <DatePicker 
-          showTimeSelect
           selected={startDate} 
           onChange={(date) => setStartDate(date)}
-           
+          showTimeSelect 
+          dateFormat="MMMM d // h:mm aa"   
+          placeholderText="Select a day and time"       
           />
           </day>
        
@@ -43,16 +44,11 @@ const TrainingEvent = () => {
           aria-labelledby='training-row-radio-buttons-group-label'
           name='row-radio-buttons-group'
           >
-        <FormControlLabel value="female" control={<Radio />} label="Radio" />
-        <FormControlLabel value="male" control={<Radio />} label="Duckling" />
-        <FormControlLabel value="other" control={<Radio />} label="Something Else" />
-        <FormControlLabel
-          value="disabled"
-          disabled
-          control={<Radio />}
-          label="other"
-        />
-          </RadioGroup>
+        <FormControlLabel value="radtrain" control={<Radio />} label="Radio" />
+        <FormControlLabel value="ducktrain" control={<Radio />} label="Duckling" />
+        <FormControlLabel value="other" control={<Radio />} label="Miscellaneous" />
+       
+        </RadioGroup>
         </type>
         <instructor class="lineitem instructor">
           Instructor:

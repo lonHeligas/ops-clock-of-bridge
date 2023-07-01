@@ -15,6 +15,13 @@ import setMinutes from "date-fns/setMinutes";
 
 // get the list of events like UpcomingItem and then change them to input fields
 
+const handleSubmit = (event) => {
+  event.preventDefault();
+  console.log('The submit button was clicked')
+  console.log()
+
+}
+
 
 const TrainingEvent = () => {
   const [startDate, setStartDate] = useState(
@@ -55,7 +62,7 @@ const TrainingEvent = () => {
           <input type="text" >
           </input>
         </instructor>     
-        <input type="submit" value="Submit" />   
+        <input onClick={handleSubmit} type="submit" value="Submit" />   
       </lineitem>
       </p>
       </FormControl>          

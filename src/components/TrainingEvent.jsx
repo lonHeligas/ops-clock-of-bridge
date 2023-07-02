@@ -11,6 +11,9 @@ import FormLabel from '@mui/material/FormLabel';
 import "react-datepicker/dist/react-datepicker.css";
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
+import moment from 'moment';
+import fs from 'fs';
+
 
 
 // get the list of events like UpcomingItem and then change them to input fields
@@ -18,29 +21,58 @@ import setMinutes from "date-fns/setMinutes";
 
 
 
-// const submitData = (event) => {
-//   event.preventDefault();
-//   console.log('The submit button was clicked')
-
-// }
-
-function handleChange(evt) {
-  console.log("new value", evt.target.value);
-}
 
 
-const TrainingEvent = () => {
-  instructorName = ""
-  const [startDate, setStartDate] = useState(
-    setHours(setMinutes(new Date(), 30), 16)    
-  );  
-    return (
+
+const TrainingEvent = () => {  
+  const [startDate, setStartDate] = useState(0)
+  const [instructorName, setInstructorName]  = useState("")
+  const [trainingType, setTrainingType] = useState("")
+  function handleChange(evt) {
     
+    setInstructorName (evt.target.value);
+  }
+  function handleTrainingType(evt){
+    setTrainingType (evt.nativeEvent.target.value);
+    
+  }
+  
+  const submitData = (event) => {
+    event.preventDefault();
+    console.log('The submit button was clicked')
+    // console.log(evt.nativeEvent.target.value)
+    // console.log(startDate);
+    // console.log(instructorName);
+    // console.log(trainingType);
+
+    const incomingEvent = {
+      date: moment(startDate).toISOString(),
+      type: trainingType,
+      instructor: instructorName
+    }    
+    // console.log (incomingEvent); 
+    
+    const data = require('../data/trainingtimes.json');
+    data.training.push(incomingEvent);
+    console.log(data);
+
+    fs.writeFileSync('../data/trainingtimes.json', JSON.stringify(data, null, 2))
+
+
+    
+  }
+
+
+
+
+
+
+  return (    
       <FormControl>
        <p>
       <lineitem class="training-entry">
         <p>Enter a new training event here:</p>
-        {/* <day class="lineitem day">
+        <day class="lineitem day">
           Day and Time:
           <DatePicker 
           selected={startDate} 
@@ -49,9 +81,9 @@ const TrainingEvent = () => {
           dateFormat="MMMM d // h:mm aa"   
           placeholderText="Select a day and time"       
           />
-          </day> */}
+          </day>
        
-        {/* <type class="lineitem type">
+        <type class="lineitem type">
           <FormLabel id="training-row-radio-buttons-group-label">Training:</FormLabel>
             <RadioGroup
             row
@@ -59,37 +91,35 @@ const TrainingEvent = () => {
             name='row-radio-buttons-group'
             >
           <FormControlLabel 
-            value="radtrain" 
+            value="radio" 
             control={<Radio />} 
             label="Radio" 
-            // onChange={this.onValueChange}        
+            onChange={handleTrainingType}        
           />
           <FormControlLabel 
-            value="ducktrain" 
+            value="duckling" 
             control={<Radio />} 
             label="Duckling" 
-            // onChange={this.onValueChange}
+            onChange={handleTrainingType}
           />
           <FormControlLabel 
-            value="other" 
+            value="miscellaneous" 
             control={<Radio />} 
             label="Miscellaneous"
-            // onChange={this.onValueChange}
+            onChange={handleTrainingType}
           />
         
           </RadioGroup>
-        </type> */}
+        </type>
         <instructor class="lineitem instructor">
           Instructor:
           <input 
-            type="text"
-            name="instructorName"
-            value={this.instructorName}
+            type="text"    
             onChange={handleChange}
             />
           
         </instructor>     
-        <input type="submit" value="Submit" />   
+        <input onClick={submitData} type="submit" value="Submit" />   
       </lineitem>
       </p>
       </FormControl>  

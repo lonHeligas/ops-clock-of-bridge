@@ -12,7 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
 import moment from 'moment';
-import fs from 'fs';
+// import fs from 'fs';
 
 
 
@@ -56,7 +56,7 @@ const TrainingEvent = () => {
     data.training.push(incomingEvent);
     console.log(data);
 
-    fs.writeFileSync('../data/trainingtimes.json', JSON.stringify(data, null, 2))
+    // fs.writeFileSync('../data/trainingtimes.json', JSON.stringify(data, null, 2))
 
 
     

@@ -9,7 +9,6 @@ import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Admin from './components/Admin';
 import AdminButton from './components/AdminButton';
 import './styles/main.css'
-import opslogo from './media/logo_con_operations.png'
 import ClockBanner from './components/ClockBanner'
 
 function App() {

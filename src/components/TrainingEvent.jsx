@@ -21,10 +21,6 @@ import "../styles/Upcomingitem.css"
 
 
 
-
-
-
-
 const TrainingEvent = () => {  
   const [startDate, setStartDate] = useState(0)
   const [instructorName, setInstructorName]  = useState("")
@@ -51,13 +47,23 @@ const TrainingEvent = () => {
       type: trainingType,
       instructor: instructorName
     }    
+    fetch("http://localhost:3003", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+
+      },
+      body: JSON.stringify(incomingEvent),
+    }).then(response => {
+      alert("YE HAVE BEEN SAVED!");
+    })
     // console.log (incomingEvent); 
     
-    const data = require('../data/trainingtimes.json');
-    data.training.push(incomingEvent);
-    console.log(data);
+    // const data = require('../../public/data/trainingtimes.json');
+    // data.training.push(incomingEvent);    
+    // console.log(data);
 
-    // fs.writeFileSync('../data/trainingtimes.json', JSON.stringify(data, null, 2))
+   
   }
 
   return (    

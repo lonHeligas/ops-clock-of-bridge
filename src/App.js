@@ -10,6 +10,7 @@ import Admin from './components/Admin';
 import AdminButton from './components/AdminButton';
 import './styles/main.css'
 import opslogo from './media/logo_con_operations.png'
+import ClockBanner from './components/ClockBanner'
 
 function App() {
 
@@ -24,12 +25,13 @@ function App() {
         </Route>        
         <Route path="/" element={
           <Wrapper className="wrapper">
-            <p>
+            <ClockBanner/>
+            {/* <p>
               <img src={opslogo} className="ops-logo" />
             </p>            
             <clockcontainer class='clock-container'>
               <Clock className="clock-flip" config={{height: '175px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/>
-            </clockcontainer>           
+            </clockcontainer>            */}
           {/* backgroundColor: '#8dc63f', textColor: '#92278f' */}
           
           <nexttrain class="training-title">

@@ -4,6 +4,7 @@ import { Clock } from '@sujitsimon/react-flipclock';
 import '../styles/Clock.css'
 import TrainingEvent from './TrainingEvent';
 import Wrapper from './Wrapper';
+import ClockBanner from './ClockBanner'
 
 
 
@@ -23,7 +24,8 @@ import Wrapper from './Wrapper';
 const Admin = () => {
  return (
   <Wrapper>
-  <Clock className="clock-flip" config={{height: '100px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/>
+    <ClockBanner/>
+  {/* <Clock className="clock-flip" config={{height: '100px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/> */}
   
   <TrainingEvent />
 

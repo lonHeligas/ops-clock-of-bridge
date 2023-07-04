@@ -15,6 +15,16 @@
   padding: 2px;  
 }
 
+.lineitem-admin {  
+  border: 1px solid red;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+  padding: 10px;  
+}
+
 .ops-logo {
   filter: invert(1);
   width: 400px;
@@ -22,8 +32,29 @@
 }
 
 .item-box {
-  border: 2px ridge rgb(255, 255, 255);
+  border: 3px ridge rgb(255, 255, 255);
   width: 350px;
+  justify-content: left;
+  border-radius: 6px;
+  background-color: rgb(40, 40, 40);
+}
+
+.item-box-larger {
+  border: 10px ridge rgb(255, 255, 255);
+  padding: 20px;
+  background-color: rgb(62, 62, 62);
   justify-content: left;
   border-radius: 5px
 }
+
+.date-picker-text {
+  padding-right: 10px;
+}
+
+.radio-label {
+  padding-right: 10px;
+}
+
+/* .submit-field {
+
+} */

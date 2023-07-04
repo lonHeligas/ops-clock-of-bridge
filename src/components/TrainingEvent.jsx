@@ -13,6 +13,7 @@ import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
 import moment from 'moment';
 // import fs from 'fs';
+import "../styles/Upcomingitem.css"
 
 
 
@@ -57,34 +58,27 @@ const TrainingEvent = () => {
     console.log(data);
 
     // fs.writeFileSync('../data/trainingtimes.json', JSON.stringify(data, null, 2))
-
-
-    
   }
 
-
-
-
-
-
   return (    
-      <FormControl>
-       <p>
-      <lineitem class="training-entry">
-        <p>Enter a new training event here:</p>
-        <day class="lineitem day">
-          Day and Time:
-          <DatePicker 
+      <FormControl>       
+        <p class='training-entry '>Enter a new training event here:</p>
+      <lineitem class="training-entry item-box-larger" >
+        <day class="lineitem-admin day">
+          <text class='date-picker-text'>
+            Day and Time: 
+          </text>
+          <DatePicker          
           selected={startDate} 
           onChange={(date) => setStartDate(date)}
           showTimeSelect 
           dateFormat="MMMM d // h:mm aa"   
-          placeholderText="Select a day and time"       
+          placeholderText="Select a day and time"     
           />
           </day>
        
-        <type class="lineitem type">
-          <FormLabel id="training-row-radio-buttons-group-label">Training:</FormLabel>
+        <type class="lineitem-admin type">
+          <FormLabel class=" radio-label" id="training-row-radio-buttons-group-label">Training:</FormLabel>
             <RadioGroup
             row
             aria-labelledby='training-row-radio-buttons-group-label'
@@ -111,7 +105,7 @@ const TrainingEvent = () => {
         
           </RadioGroup>
         </type>
-        <instructor class="lineitem instructor">
+        <instructor class="lineitem-admin instructor">
           Instructor:
           <input 
             type="text"    
@@ -119,9 +113,9 @@ const TrainingEvent = () => {
             />
           
         </instructor>     
-        <input onClick={submitData} type="submit" value="Submit" />   
+        <input class="submit-field" onClick={submitData} type="submit" value="Submit" />   
       </lineitem>
-      </p>
+      
       </FormControl>  
 
 

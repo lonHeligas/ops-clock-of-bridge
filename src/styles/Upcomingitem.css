@@ -1,14 +1,29 @@
 
-
+.upcoming-block {
+  margin-left: 200px
+}
 
 .training-entry {
   color: rgb(255, 255, 255);
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .lineitem {
   display: inline-flex;
   justify-content: space-around;
-  margin-left: 20px;
+  margin-left: 5px;
+  padding: 2px;  
 }
 
+.ops-logo {
+  filter: invert(1);
+  width: 400px;
+
+}
+
+.item-box {
+  border: 2px ridge rgb(255, 255, 255);
+  width: 350px;
+  justify-content: left;
+  border-radius: 5px
+}

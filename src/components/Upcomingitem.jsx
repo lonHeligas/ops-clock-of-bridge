@@ -22,16 +22,16 @@ const trainingDate = moment(traininglesson.data.date);
     <training class="training-entry">
       <p>
       <lineitem>
-        <day class="lineitem day">
+        <day class="lineitem day item-box">
           Day: {trainingDate.format('dddd')}
         </day>
-        <time class="lineitem time">
+        <time class="lineitem time item-box">
           Time: {trainingDate.format('h:mm a')}
         </time>
-        <type class="lineitem type">
+        <type class="lineitem type item-box">
           {traininglesson.data.type} training
         </type>
-        <instructor class="lineitem instructor">
+        <instructor class="lineitem instructor item-box">
           Your instructor is: {traininglesson.data.instructor}
         </instructor>
         

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
+// import { render } from 'react-dom';
 import "../styles/Clock.css"
 // import Button from '@mui/material-next/Button';
 import { useState } from 'react';
@@ -14,14 +14,7 @@ const SortedList = TrainingList.training.sort((a, b) => moment(a.date).unix() - 
 console.log('sorted list: ');
 console.log(SortedList);
 
-// class App extends Component {
-//   constructor() {
-//     this.state = {
-//       currentDateTime: Date().toLocaleString()
 
-//     }
-
-//   }
 
 const Upcoming = () => {
   return TrainingList.training.map(Training => {

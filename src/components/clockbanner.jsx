@@ -8,7 +8,7 @@ import '../styles/main.css'
 class ClockBanner extends Component {
   render (){
     return (
-      <div style={{ display: 'flex', flexDirection: 'row'}}>
+      <div style={{ display: 'flex', flexDirection: 'line', alignItems: "center"}}>
         <img src={opslogo} className="ops-logo" width="50%"/>
         <clockcontainer class='clock-container'>
               <Clock className="clock-flip" config={{height: '175px', backgroundColor: '#92278f', textColor: '#8dc63f'}}/>

@@ -8,16 +8,22 @@ import TrainingList from '../data/trainingtimes.json';
 import Upcomingitem from './Upcomingitem';
 import moment from 'moment';
 
+const FilteredList = TrainingList.training.filter((course) => {
+  // console.log('moment comparison')
+  // console.log(moment(course.date).unix() > moment().unix())
+  
+  return moment(course.date).unix() > moment().unix();
+})
+// console.log(FilteredList)
 
-
-const SortedList = TrainingList.training.sort((a, b) => moment(a.date).unix() - moment(b.date).unix());
+const SortedList = FilteredList.sort((a, b) => moment(a.date).unix() - moment(b.date).unix());
 console.log('sorted list: ');
 console.log(SortedList);
 
 
 
 const Upcoming = () => {
-  return TrainingList.training.map(Training => {
+  return SortedList.map(Training => {
     return (
       // { this.state.currentDateTime}
       <Upcomingitem data={Training}/>            

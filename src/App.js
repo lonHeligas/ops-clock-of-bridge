@@ -9,6 +9,7 @@ import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Admin from './components/Admin';
 import AdminButton from './components/AdminButton';
 import './styles/main.css'
+import "./styles/Upcomingitem.css"
 import ClockBanner from './components/ClockBanner'
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
           <Wrapper className="wrapper">
             <Admin>              
             </Admin>
-        </Wrapper>}>        
+          </Wrapper>}>        
         </Route>        
         <Route path="/" element={
           <Wrapper className="wrapper">

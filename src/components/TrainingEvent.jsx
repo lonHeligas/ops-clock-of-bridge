@@ -11,6 +11,7 @@ import FormLabel from '@mui/material/FormLabel';
 import "react-datepicker/dist/react-datepicker.css";
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
+import subDays from "date-fns/subDays"
 import moment from 'moment';
 // import fs from 'fs';
 import "../styles/Upcomingitem.css"
@@ -58,8 +59,7 @@ const TrainingEvent = () => {
     }).then(response => {
       alert("YE HAVE BEEN SAVED!");
     })
-    // console.log (incomingEvent); 
-    
+    // console.log (incomingEvent);     
     // const data = require('../../public/data/trainingtimes.json');
     // data.training.push(incomingEvent);    
     // console.log(data);
@@ -80,7 +80,11 @@ const TrainingEvent = () => {
           onChange={(date) => setStartDate(date)}
           showTimeSelect 
           dateFormat="MMMM d // h:mm aa"   
-          placeholderText="Select a day and time"     
+          placeholderText="Select a day and time"
+          minTime={setHours(setMinutes(new Date(), 0), 8)}
+          maxTime={setHours(setMinutes(new Date(), 0), 23)}
+          // excludeDates={[new Date(), subDays(new Date(), 10)]}
+           
           />
           </day>
        

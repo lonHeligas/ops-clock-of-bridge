@@ -1,39 +1,9 @@
 {
   "training": [
     {
-      "date": "2023-07-07T09:00-0500",
-      "type": "duckling",
-      "instructor": "Luke"
-    },
-    {
-      "date": "2023-07-07T12:00-0500",
+      "date": "2023-07-06T19:00:00.000Z",
       "type": "radio",
-      "instructor": "Jack"
-    },
-    {
-      "date": "2023-07-08T14:00-0500",
-      "type": "radio",
-      "instructor": "Lemmy"
-    },
-    {
-      "date": "2023-07-07T12:00-0500",
-      "type": "radio",
-      "instructor": "Sam"
-    },
-    {
-      "date": "2023-07-09T15:00:00.000Z",
-      "type": "duckling",
-      "instructor": "Me"
-    },
-    {
-      "date": "2023-07-04T17:00:00.000Z",
-      "type": "radio",
-      "instructor": "Londo"
-    },
-    {
-      "date": "1970-01-01T00:00:00.000Z",
-      "type": "",
-      "instructor": ""
+      "instructor": "Lon"
     }
   ]
 }

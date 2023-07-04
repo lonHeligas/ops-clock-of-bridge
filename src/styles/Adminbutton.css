@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
-.admin-button {
+/* .admin-button {
   color: white;
+  width: 200px;
+} */
+
+.admin-button MultiButtonBase-root {
+  padding: 200px
 }

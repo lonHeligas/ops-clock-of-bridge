@@ -41,7 +41,7 @@ const Upcoming = () => {
   console.log('sorted list: ');
   console.log(SortedList);
 
-  return SortedList.slice(0,4).map(Training => {
+  return SortedList.slice(0,3).map(Training => {
     return (
       // { this.state.currentDateTime}
       <Upcomingitem data={Training}/>            

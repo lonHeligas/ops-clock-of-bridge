@@ -6,7 +6,21 @@
 .training-entry {
   color: rgb(255, 255, 255);
   font-size: 25px;
+  /* padding-left: 100px; */
 }
+
+.training-entry-prompt {
+  padding-left: 100px;
+  color: white;
+  font-size: 25px;
+}
+
+.training-entry entrybox {
+  color: white;
+  font-size: 25px;
+}
+
+
 
 .lineitem {
   display: inline-flex;
@@ -16,13 +30,23 @@
 }
 
 .lineitem-admin {  
-  border: 1px solid red;
+  /* border: 1px dashed black; */
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-left: 25px;
-  padding: 10px;  
+  padding: 10px;    
+  
+}
+
+
+.lineitem-admin div div input {
+  height: 30px;
+}
+
+.lineitem-admin MultiFormGrou-root {
+  margin-top: 20px
 }
 
 .ops-logo {
@@ -37,6 +61,7 @@
   justify-content: left;
   border-radius: 6px;
   background-color: rgb(40, 40, 40);
+  
 }
 
 .item-box-larger {
@@ -44,7 +69,8 @@
   padding: 20px;
   background-color: rgb(62, 62, 62);
   justify-content: left;
-  border-radius: 5px
+  border-radius: 5px;
+  margin-left: 50px;
 }
 
 .date-picker-text {
@@ -55,6 +81,18 @@
   padding-right: 10px;
 }
 
-/* .submit-field {
+.submit-button {
+  margin-left: 20px;
+  background-color: purple;
+  height: 30px;
+  width: 100px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px
 
-} */
+}
+
+.input-textfield {
+  height: 30px;
+  margin-left: 20px
+}

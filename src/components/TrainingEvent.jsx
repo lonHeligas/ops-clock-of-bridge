@@ -14,6 +14,7 @@ import setMinutes from "date-fns/setMinutes";
 import moment from 'moment';
 // import fs from 'fs';
 import "../styles/Upcomingitem.css"
+import Upcoming from "./Upcoming"
 
 
 
@@ -36,7 +37,7 @@ const TrainingEvent = () => {
   
   const submitData = (event) => {
     event.preventDefault();
-    console.log('The submit button was clicked')
+    // console.log('The submit button was clicked')
     // console.log(evt.nativeEvent.target.value)
     // console.log(startDate);
     // console.log(instructorName);
@@ -68,8 +69,8 @@ const TrainingEvent = () => {
 
   return (    
       <FormControl>       
-        <p class='training-entry '>Enter a new training event here:</p>
-      <lineitem class="training-entry item-box-larger" >
+        <p class='training-entry-prompt'>Enter a new training event here:</p>
+      <lineitem class="training-entry entrybox item-box-larger" >
         <day class="lineitem-admin day">
           <text class='date-picker-text'>
             Day and Time: 
@@ -83,8 +84,8 @@ const TrainingEvent = () => {
           />
           </day>
        
-        <type class="lineitem-admin type">
-          <FormLabel class=" radio-label" id="training-row-radio-buttons-group-label">Training:</FormLabel>
+        <type class="lineitem-admin type radiobutton-group">
+          <FormLabel class=" radio-label" id="training-row-radio-buttons-group-label"></FormLabel>
             <RadioGroup
             row
             aria-labelledby='training-row-radio-buttons-group-label'
@@ -113,16 +114,24 @@ const TrainingEvent = () => {
         </type>
         <instructor class="lineitem-admin instructor">
           Instructor:
-          <input 
+          <input class="input-textfield"
             type="text"    
             onChange={handleChange}
             />
           
         </instructor>     
-        <input class="submit-field" onClick={submitData} type="submit" value="Submit" />   
+        <input class="submit-button" onClick={submitData} type="submit" value="Submit" />   
       </lineitem>
       
+      <nexttrain class='training-entry-prompt'>
+        <p>Upcoming Training Sessions:</p>
+      </nexttrain>
+      <Upcoming className="upcoming-block"/>
+
       </FormControl>  
+
+
+
 
 
     

@@ -1,15 +1,15 @@
 {
   "training": [
-    
     {
       "date": "2023-07-08T13:00:00.000Z",
       "type": "radio",
       "instructor": "You"
     },
     {
-      "date": "2023-07-09T00:00:00.000Z",
+      "date": "2023-07-05T00:00:00.000Z",
       "type": "radio",
       "instructor": "Lemmy"
     }
+   
   ]
 }

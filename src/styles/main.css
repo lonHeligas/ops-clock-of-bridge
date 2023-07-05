@@ -11,3 +11,8 @@
   justify-content: space-around;
   margin-left: 20px;
 }
+
+.center-everything {
+  width: auto;
+  margin-left: 250px;
+}

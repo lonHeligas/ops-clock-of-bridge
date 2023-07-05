@@ -4,9 +4,10 @@ const Wrapper = ({children}) => {
     <div style={{ 
       minHeight: "100vh", 
       backgroundColor: "#111",
-      justifyContent: 'center',
-      alignItems: 'center',
-      paddingLeft: '150px'}}>
+      // justifyContent: 'center',
+      // alignItems: 'center',
+      // marginLeft: 'auto'
+      }}>
       { children }
     </div>
   )

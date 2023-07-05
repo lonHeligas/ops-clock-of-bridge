@@ -96,19 +96,19 @@ const TrainingEvent = () => {
             name='row-radio-buttons-group'
             >
           <FormControlLabel 
-            value="radio" 
+            value="Radio" 
             control={<Radio />} 
             label="Radio" 
             onChange={handleTrainingType}        
           />
           <FormControlLabel 
-            value="duckling" 
+            value="Duckling" 
             control={<Radio />} 
             label="Duckling" 
             onChange={handleTrainingType}
           />
           <FormControlLabel 
-            value="miscellaneous" 
+            value="Miscellaneous" 
             control={<Radio />} 
             label="Miscellaneous"
             onChange={handleTrainingType}

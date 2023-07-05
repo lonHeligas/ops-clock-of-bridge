@@ -19,12 +19,15 @@ function App() {
       <Routes>
         <Route path="/admin" element={
           <Wrapper className="wrapper">
+            <div class="center-everything">
             <Admin>              
             </Admin>
+            </div>
           </Wrapper>}>        
         </Route>        
         <Route path="/" element={
           <Wrapper className="wrapper">
+            <div class="center-everything">
             <ClockBanner/>
             {/* <p>
               <img src={opslogo} className="ops-logo" />
@@ -42,6 +45,7 @@ function App() {
           <AdminButton>
             {/* <Link to="{/admin}" relative="path" target="_blank"></Link> */}
           </AdminButton>
+          </div>
         </Wrapper>}>        
         </Route>
       </Routes>          

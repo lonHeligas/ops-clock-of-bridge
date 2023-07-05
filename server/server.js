@@ -12,6 +12,11 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store')
+  next()
+})
+
 app.get('/', (req,res) => { 
   res.status(200).send(
     require('../public/data/trainingtimes.json')

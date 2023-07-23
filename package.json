@@ -1,6 +1,9 @@
 {
   "name": "ops-clock-of-bridge",
   "version": "0.1.0",
+  "engines": {
+    "node": "18.x"
+  },
   "homepage": "https://lonheligas.github.io/ops-clock-of-bridge",
   "private": true,
   "dependencies": {
